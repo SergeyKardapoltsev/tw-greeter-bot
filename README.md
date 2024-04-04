@@ -1,0 +1,1 @@
+A simple Telegram bot that greets each new chat user with a predefined phrase.
