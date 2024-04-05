@@ -14,7 +14,8 @@ load_dotenv()
 TOKEN = os.getenv('GREETER_TOKEN')
 
 async def greet_user(update: Update, context: CallbackContext):
-        user = update.message.new_chat_members[0]
+    users = update.message.new_chat_members
+    for user in users:
         user_display_name = f"{user.first_name}"
         if user.username is not None:
             mention = f"@{user.username}"
